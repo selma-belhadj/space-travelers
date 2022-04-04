@@ -9,8 +9,8 @@ import './App.css';
 function App() {
   return (
     <Router>
-      <div>
-        <Header />
+      <Header />
+      <div className="content">
         <Routes>
           <Route
             exact

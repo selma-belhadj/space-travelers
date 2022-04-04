@@ -1,7 +1,11 @@
 header {
+  position: fixed;
+  inset: 0;
+  height: 90px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  box-shadow: 2px 2px 8px 0 darkgrey;
 
   .logo {
     display: flex;
@@ -13,9 +17,22 @@ header {
     display: flex;
     gap: 10px;
 
+    a {
+      text-decoration: none;
+      color: darkgrey;
+    }
+
+    a:hover {
+      color: black;
+    }
+
     a:last-child {
       border-left: 1px solid darkgrey;
       padding-left: 10px;
+    }
+
+    .active {
+      color: black;
     }
   }
 }
