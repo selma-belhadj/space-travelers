@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import logo from '../images/logo.png';
+import './Header.scss';
 
 function Header() {
   const links = [
@@ -27,7 +28,7 @@ function Header() {
   ];
   return (
     <header>
-      <div>
+      <div className="logo">
         <img src={logo} alt="logo" style={{ width: '4.5rem', height: '4.5rem' }} />
         <h1>Space Travelers&apos; Hub</h1>
       </div>

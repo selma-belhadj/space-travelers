@@ -1,0 +1,21 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  nav {
+    display: flex;
+    gap: 10px;
+
+    a:last-child {
+      border-left: 1px solid darkgrey;
+      padding-left: 10px;
+    }
+  }
+}
