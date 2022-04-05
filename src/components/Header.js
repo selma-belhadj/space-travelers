@@ -29,7 +29,7 @@ function Header() {
   return (
     <header className="spacing">
       <div className="logo">
-        <img src={logo} alt="logo" style={{ width: '4.5rem', height: '4.5rem' }} />
+        <img src={logo} alt="logo" />
         <h1>Space Travelers&apos; Hub</h1>
       </div>
       <nav>
