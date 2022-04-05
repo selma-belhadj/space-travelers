@@ -1,6 +1,7 @@
 $medium: 900px;
 
 header {
+  background-color: white;
   position: fixed;
   inset: 0;
   height: 90px;
@@ -8,6 +9,7 @@ header {
   justify-content: space-between;
   align-items: center;
   box-shadow: 2px 2px 8px 0 darkgrey;
+  z-index: 10;
 
   .logo {
     display: flex;
