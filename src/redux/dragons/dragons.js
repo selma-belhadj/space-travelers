@@ -53,4 +53,3 @@ const dragonsReducer = (state = [], action) => {
 };
 
 export default dragonsReducer;
-
