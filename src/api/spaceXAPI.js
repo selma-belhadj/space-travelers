@@ -25,6 +25,28 @@ class SpaceXAPI {
     }
     return null;
   });
+
+  static fetchAllMissions = async () => fetch(`${this.baseURL}missions`, {
+    method: 'GET',
+    headers: {
+      'Content-type': 'application/json; charset=UTF-8',
+    },
+  }).then(async (response) => {
+    if (response.ok) {
+      const data = await response.json();
+      const requiredData = [];
+
+      data.forEach((value) => {
+        requiredData.push({
+          id: value.mission_id,
+          name: value.mission_name,
+          description: value.description,
+        });
+      });
+      return requiredData;
+    }
+    return null;
+  });
 }
 
 export default SpaceXAPI;

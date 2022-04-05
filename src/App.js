@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from './components/Header';
 import RocketsPage from './pages/RocketsPage';
 import Dragons from './pages/Dragons';
-import Missions from './pages/Missions';
+import MissionsPage from './pages/MissionsPage';
 import MyProfilePage from './pages/MyProfilePage';
 import './App.css';
 
@@ -23,7 +23,7 @@ function App() {
           />
           <Route
             path="/Missions"
-            element={<Missions />}
+            element={<MissionsPage />}
           />
           <Route
             path="/Profile"
