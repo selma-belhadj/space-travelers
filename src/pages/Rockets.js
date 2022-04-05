@@ -1,8 +1,23 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchAllRockets } from '../redux/rockets/rockets';
 
 function Rockets() {
+  const dispatch = useDispatch();
+  const rockets = useSelector((state) => state.rockets);
+
+  useEffect(() => {
+    if (!rockets.length) dispatch(fetchAllRockets());
+  }, []);
+
   return (
-    <div>Rockets</div>
+    <div>
+      {rockets.map((rocket) => (
+        <p key={rocket.id}>
+          {rocket.name}
+        </p>
+      ))}
+    </div>
   );
 }
 
