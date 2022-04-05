@@ -7,6 +7,7 @@ const Rocket = ({
   name,
   description,
   image,
+  onReserveButtonClick,
 }) => (
   <li className="rocket">
     <div className="rocket-image-container">
@@ -15,7 +16,7 @@ const Rocket = ({
     <div className="rocket-description">
       <h2>{name}</h2>
       <p>{description}</p>
-      <Button variant="primary">Reserve Rocket</Button>
+      <Button variant="primary" onClick={onReserveButtonClick}>Reserve Rocket</Button>
     </div>
   </li>
 );
@@ -24,6 +25,7 @@ Rocket.propTypes = {
   name: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
+  onReserveButtonClick: PropTypes.func.isRequired,
 };
 
 export default Rocket;

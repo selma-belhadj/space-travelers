@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchAllRockets } from '../redux/rockets/rockets';
+import { fetchAllRockets, toggleReservedStatus } from '../redux/rockets/rockets';
 import Rocket from '../components/Rocket';
 import './RocketsPage.scss';
 
@@ -25,6 +25,7 @@ function RocketsPage() {
               name={name}
               description={description}
               image={images[0]}
+              onReserveButtonClick={() => dispatch(toggleReservedStatus({ id }))}
             />
           );
         })}
