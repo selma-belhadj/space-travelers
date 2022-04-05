@@ -1,9 +1,9 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from './components/Header';
 import RocketsPage from './pages/RocketsPage';
 import Dragons from './pages/Dragons';
 import Missions from './pages/Missions';
-import MyProfile from './pages/MyProfile';
+import MyProfilePage from './pages/MyProfilePage';
 import './App.css';
 
 function App() {
@@ -27,7 +27,7 @@ function App() {
           />
           <Route
             path="/Profile"
-            element={<MyProfile />}
+            element={<MyProfilePage />}
           />
         </Routes>
       </div>

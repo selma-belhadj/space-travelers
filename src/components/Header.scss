@@ -73,3 +73,23 @@ header {
     }
   }
 }
+
+@media (max-width: 500px) {
+  header {
+    .logo {
+      h1 {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  header {
+    .logo {
+      h1 {
+        font-size: 1.3rem;
+      }
+    }
+  }
+}
