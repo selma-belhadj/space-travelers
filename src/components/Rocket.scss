@@ -16,9 +16,27 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+
+    h2 {
+      font-size: 1.6rem;
+    }
+
+    p {
+      font-size: 0.9rem;
+    }
   }
 }
 
 .rocket:hover {
   transform: scale(1.02);
+}
+
+@media (max-width: 768px) {
+  .rocket {
+    flex-direction: column;
+
+    img {
+      width: 100%;
+    }
+  }
 }
