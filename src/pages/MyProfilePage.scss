@@ -1,0 +1,20 @@
+#profile-page {
+  display: flex;
+  padding-block: 30px;
+
+  #missions-list {
+    flex-basis: 50%;
+  }
+
+  #rockets-list {
+    flex-basis: 50%;
+  }
+
+  hr {
+    margin-block: 30px;
+  }
+
+  p {
+    margin-left: 15px;
+  }
+}
