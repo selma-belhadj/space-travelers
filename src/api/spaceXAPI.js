@@ -17,7 +17,7 @@ class SpaceXAPI {
           id: value.id,
           name: value.rocket_name,
           type: value.rocket_type,
-          flickr_images: value.flickr_images,
+          images: value.flickr_images,
         });
       });
       return requiredData;

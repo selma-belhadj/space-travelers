@@ -19,4 +19,6 @@ const rocketsReducer = (state = [], actions) => {
   }
 };
 
-export default rocketsReducer;
+export {
+  rocketsReducer as default, fetchAllRockets,
+};
