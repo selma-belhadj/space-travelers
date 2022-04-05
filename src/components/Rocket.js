@@ -10,7 +10,7 @@ const Rocket = ({
 }) => (
   <li className="rocket">
     <div className="rocket-image-container">
-      <img src={image} alt="" />
+      <img src={image} alt="Rocket" />
     </div>
     <div className="rocket-description">
       <h2>{name}</h2>
