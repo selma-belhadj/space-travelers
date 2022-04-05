@@ -2,19 +2,30 @@ $medium: 900px;
 
 header {
   background-color: white;
+  flex-direction: column;
   position: fixed;
   inset: 0;
-  height: 90px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   box-shadow: 2px 2px 8px 0 darkgrey;
   z-index: 10;
+  gap: 10px;
+  height: 120px;
+  justify-content: center;
 
   .logo {
     display: flex;
     align-items: center;
-    gap: 1.5rem;
+    gap: 15px;
+
+    h1 {
+      font-size: 1.4rem;
+    }
+
+    img {
+      width: 50px;
+      height: 50px;
+    }
   }
 
   nav {
@@ -24,6 +35,7 @@ header {
     a {
       text-decoration: none;
       color: darkgrey;
+      font-size: 0.95rem;
     }
 
     a:hover {
@@ -41,17 +53,21 @@ header {
   }
 }
 
-@media only screen and (max-width: $medium) {
-  .logo {
-    h1 {
-      font-size: 1.5rem;
-    }
-  }
-
+@media (min-width: $medium) {
   header {
-    flex-direction: column;
-    gap: 10px;
-    height: 120px;
-    justify-content: center;
+    height: 90px;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .logo {
+      h1 {
+        font-size: 1.6rem;
+      }
+
+      img {
+        width: 50px;
+        height: 50px;
+      }
+    }
   }
 }
