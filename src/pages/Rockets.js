@@ -7,7 +7,7 @@ function Rockets() {
   const rockets = useSelector((state) => state.rockets);
 
   useEffect(() => {
-    dispatch(fetchAllRockets());
+    if (!rockets.length) dispatch(fetchAllRockets());
   }, []);
 
   return (
