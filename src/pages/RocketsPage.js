@@ -25,10 +25,7 @@ function RocketsPage() {
               name={name}
               description={description}
               image={images[0]}
-              onReserveButtonClick={() => {
-                dispatch(toggleReservedStatus({ id }));
-                console.log(rockets);
-              }}
+              onReserveButtonClick={() => dispatch(toggleReservedStatus({ id }))}
             />
           );
         })}
