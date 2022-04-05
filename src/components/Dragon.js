@@ -1,5 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Button } from 'react-bootstrap';
 
 const Dragon = (props) => {
   const {
@@ -14,7 +16,7 @@ const Dragon = (props) => {
   return (
     <li key={dragonId} className="item">
       <div>
-        <img src={dragonImageLink} alt={dragonName} style={{ width: '100%' }} />
+        <img src={dragonImageLink} alt={dragonName} />
       </div>
       <div className="info">
         <h3>{dragonName}</h3>
@@ -31,9 +33,9 @@ const Dragon = (props) => {
         <div>
           {
             dragonReserved ? (
-              <button type="button" className="btn btn-cancel">Cancel Reservation</button>
+              <Button variant="outline-secondary">Cancel Reservation</Button>
             ) : (
-              <button type="button" className="btn btn-reserve">Reserve Dragon</button>
+              <Button variant="primary">Reserve Dragon</Button>
             )
           }
         </div>

@@ -15,8 +15,8 @@ const Dragons = () => {
   });
 
   return (
-    <div className="content dragons-page-container">
-      <ul>
+    <div className="spacing">
+      <ul className="dragons-list">
         {dragonsList.map((dragon) => (
           <Dragon
             key={dragon.dragonId}
@@ -34,32 +34,3 @@ const Dragons = () => {
 };
 
 export default Dragons;
-
-// const DragonsList = () => {
-//   const dispatch = useDispatch();
-//   const dragonsList = useSelector((state) => state.dragons);
-
-//   useEffect(() => {
-//     if (dragonsList.length < 1) {
-//       dispatch(listDragons());
-//     }
-//   });
-
-//   return (
-//     <ul>
-//       {dragonsList.map((dragon) => (
-//         <DragonItem
-//           key={dragon.dragonId}
-//           dragonId={dragon.dragonId}
-//           dragonName={dragon.dragonName}
-//           dragonType={dragon.dragonType}
-//           dragonDescription={dragon.dragonDescription}
-//           dragonImageLink={dragon.dragonImage}
-//           dragonReserved={dragon.dragonReserved}
-//         />
-//       ))}
-//     </ul>
-//   );
-// };
-
-// export default DragonsList;
