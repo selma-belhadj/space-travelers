@@ -18,6 +18,7 @@ class SpaceXAPI {
           name: value.rocket_name,
           type: value.rocket_type,
           images: value.flickr_images,
+          description: value.description,
         });
       });
       return requiredData;
