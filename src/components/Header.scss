@@ -1,3 +1,5 @@
+$medium: 900px;
+
 header {
   position: fixed;
   inset: 0;
@@ -35,4 +37,20 @@ header {
       color: black;
     }
   }
+}
+
+@media only screen and (max-width: $medium) {
+  .logo {
+    h1 {
+      font-size: 1.5rem;
+    }
+  }
+
+  header {
+    flex-direction: column;
+    gap: 10px;
+    height: 120px;
+    justify-content: center;
+  }
+
 }

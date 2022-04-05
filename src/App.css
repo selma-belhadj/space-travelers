@@ -5,3 +5,9 @@
 .content {
   padding-top: 100px;
 }
+
+@media only screen and (max-width: 900px)   {
+  .content {
+    padding-top: 130px;
+  }
+}
