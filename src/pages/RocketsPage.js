@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchAllRockets } from '../redux/rockets/rockets';
 import Rocket from '../components/Rocket';
+import './RocketsPage.scss';
 
 function RocketsPage() {
   const dispatch = useDispatch();
@@ -12,9 +13,21 @@ function RocketsPage() {
   }, []);
 
   return (
-    <div id="rockets-page">
+    <div id="rockets-page" className="spacing">
       <ul id="rockets-list">
-        <Rocket />
+        {rockets.map((rocket) => {
+          const {
+            id, name, description, images,
+          } = rocket;
+          return (
+            <Rocket
+              key={id}
+              name={name}
+              description={description}
+              image={images[0]}
+            />
+          );
+        })}
       </ul>
     </div>
   );

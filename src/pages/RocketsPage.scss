@@ -1,8 +1,15 @@
+* {
+  padding: 0;
+  margin: 0;
+  transition: 300ms;
+}
+
 #rockets-page {
   #rockets-list {
-    margin-block: 20px;
+    margin-top: 20px;
+    margin-bottom: 50px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 20px;
   }
 }
