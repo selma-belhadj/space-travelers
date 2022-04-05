@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
-import Rockets from './pages/Rockets';
+import RocketsPage from './pages/RocketsPage';
 import Dragons from './pages/Dragons';
 import Missions from './pages/Missions';
 import MyProfile from './pages/MyProfile';
@@ -15,7 +15,7 @@ function App() {
           <Route
             exact
             path="/"
-            element={<Rockets />}
+            element={<RocketsPage />}
           />
           <Route
             path="/Dragons"

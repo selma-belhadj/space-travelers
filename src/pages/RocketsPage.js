@@ -1,8 +1,9 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchAllRockets } from '../redux/rockets/rockets';
+import Rocket from '../components/Rocket';
 
-function Rockets() {
+function RocketsPage() {
   const dispatch = useDispatch();
   const rockets = useSelector((state) => state.rockets);
 
@@ -11,14 +12,12 @@ function Rockets() {
   }, []);
 
   return (
-    <div>
-      {rockets.map((rocket) => (
-        <p key={rocket.id}>
-          {rocket.name}
-        </p>
-      ))}
+    <div id="rockets-page">
+      <ul id="rockets-list">
+        <Rocket />
+      </ul>
     </div>
   );
 }
 
-export default Rockets;
+export default RocketsPage;
