@@ -18,3 +18,10 @@
     margin-left: 15px;
   }
 }
+
+@media (max-width: 500px) {
+  #profile-page {
+    flex-direction: column;
+    gap: 50px;
+  }
+}
