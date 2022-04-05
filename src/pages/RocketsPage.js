@@ -17,7 +17,7 @@ function RocketsPage() {
       <ul id="rockets-list">
         {rockets.map((rocket) => {
           const {
-            id, name, description, images,
+            id, name, description, images, reserved,
           } = rocket;
           return (
             <Rocket
@@ -25,6 +25,7 @@ function RocketsPage() {
               name={name}
               description={description}
               image={images[0]}
+              isReserved={reserved}
               onReserveButtonClick={() => dispatch(toggleReservedStatus({ id }))}
             />
           );
