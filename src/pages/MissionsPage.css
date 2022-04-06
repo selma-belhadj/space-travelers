@@ -39,6 +39,10 @@ tr:nth-child(even) {
   background: gray;
 }
 
+.available-status {
+  background: #01aacc;
+}
+
 .button-mission {
   padding: 5px 10px;
   background: transparent;
@@ -53,4 +57,9 @@ tr:nth-child(even) {
 
 .text-center {
   text-align: center;
+}
+
+.leave-mission {
+  border: 1px solid #f80021;
+  color: #f80021;
 }
