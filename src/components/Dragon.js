@@ -1,7 +1,9 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Button } from 'react-bootstrap';
+import { setDragonReservation } from '../redux/dragons/dragons';
 
 const Dragon = (props) => {
   const {
@@ -12,6 +14,12 @@ const Dragon = (props) => {
     dragonImageLink,
     dragonReserved,
   } = props;
+
+  const dispatch = useDispatch();
+
+  const handleReservation = () => {
+    dispatch(setDragonReservation({ id: dragonId }));
+  };
 
   return (
     <li key={dragonId} className="item">
@@ -33,9 +41,9 @@ const Dragon = (props) => {
         <div>
           {
             dragonReserved ? (
-              <Button variant="outline-secondary">Cancel Reservation</Button>
+              <Button onClick={handleReservation} variant="outline-secondary">Cancel Reservation</Button>
             ) : (
-              <Button variant="primary">Reserve Dragon</Button>
+              <Button onClick={handleReservation} variant="primary">Reserve Dragon</Button>
             )
           }
         </div>
