@@ -1,30 +1,46 @@
 import SpaceXAPI from '../../api/spaceXAPI';
 
-const MISSIONS_FETCHED = 'MISSIONS_FETCHED';
-const MISSION_JOINED = 'MISSION_JOINED';
+const FETCH_MISSIONS = 'FETCH_MISSIONS';
+const JOIN_MISSION = 'JOIN_MISSION';
+const LEAVE_MISSION = 'LEAVE_MISSION';
 
 const fetchAllMissions = () => async (dispatch) => {
   const missions = await SpaceXAPI.fetchAllMissions();
   if (missions) {
-    dispatch({ type: MISSIONS_FETCHED, missions });
+    dispatch({ type: FETCH_MISSIONS, missions });
   }
 };
 
 const joinMissionStatus = (id) => ({
-  type: MISSION_JOINED,
+  type: JOIN_MISSION,
+  id,
+});
+
+const leaveMissionStatus = (id) => ({
+  type: LEAVE_MISSION,
   id,
 });
 
 const missionsReducer = (state = [], actions) => {
   switch (actions.type) {
-    case MISSIONS_FETCHED:
+    case FETCH_MISSIONS:
       return actions.missions;
-    case MISSION_JOINED:
+    case JOIN_MISSION:
       return state.map((mission) => {
         if (mission.id === actions.id) {
           return {
             ...mission,
             reserved: mission.reserved ? !mission.reserved : true,
+          };
+        }
+        return mission;
+      });
+    case LEAVE_MISSION:
+      return state.map((mission) => {
+        if (mission.id === actions.id) {
+          return {
+            ...mission,
+            reserved: !mission.reserved ? mission.reserved : false,
           };
         }
         return mission;
@@ -35,5 +51,5 @@ const missionsReducer = (state = [], actions) => {
 };
 
 export {
-  missionsReducer as default, fetchAllMissions, joinMissionStatus,
+  missionsReducer as default, fetchAllMissions, joinMissionStatus, leaveMissionStatus,
 };
