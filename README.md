@@ -1,22 +1,19 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# React Template as a setup for React projects
+# Space Traveler's Hub
 
+> This project is a web application for a company that provides commercial and scientific space travel services. The application will allow users to book rockets and dragons and join selected space missions. It is built by react and redux by using SpaceX API.
 
-> Set up a React web app as a template for projects.
-- You can use this template as a setup for your React projects 
-- This template include the most important linters, Linter is a tool that analyzes your source code to flag programming errors, bugs, stylistic errors, and suspicious constructs 
-
-
+![screencapture](././src/images/Screenshot.png)
 
 ## Built With
 - HTML & CSS & JavaScript
 - Html, Css & JavaScript linters
-- React.Js
+- Reactjs and Redux
 
 ## Live Demo 
 
-[Live Demo Link](selmab-react-template.netlify.app)
+[Live Demo Link](https://team-space-travelers.netlify.app/)
 
 
 ## Getting Started
@@ -25,9 +22,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 
 - clone the repository by running\
-    `git clone https://github.com/selma-belhadj/react-template.git`
+    `git clone https://github.com/selma-belhadj/space-travelers.git`
 - navigate to the folder\
-    `cd math-magicians`
+    `cd space-travelers`
 - Install packages\
     `npm install`
 - Run the app\
@@ -44,8 +41,17 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 👤 **Selma Belhadj**
 
 - GitHub: [@selma-belhadj](https://github.com/selma-belhadj)
-- Twitter: [@Bel_Selma16](https://twitter.com/Bel_Selma16)
 - LinkedIn: [@selma-belhadj](https://www.linkedin.com/in/selma-belhadj/)
+
+👤 **Awais Amjed**
+
+- GitHub: [@awais-amjed](https://github.com/awais-amjed)
+- LinkedIn: [@awais-amjed](https://www.linkedin.com/in/awais-amjed/)
+
+👤 **Radmila Stojceva**
+
+- GitHub: [@M0rrighan](https://github.com/M0rrighan)
+- LinkedIn: [@radmila-stojceva](https://www.linkedin.com/in/radmila-stojceva/)
 
 
 ## 🤝 Contributing

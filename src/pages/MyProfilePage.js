@@ -4,6 +4,7 @@ import './MyProfilePage.scss';
 
 function MyProfilePage() {
   const rockets = useSelector((state) => state.rockets);
+  const missions = useSelector((state) => state.missions);
   const dragonsList = useSelector((state) => state.dragons);
   const filteredDragons = dragonsList.filter((dragon) => dragon.dragonReserved);
 
@@ -11,6 +12,16 @@ function MyProfilePage() {
     <div id="profile-page" className="spacing">
       <div id="missions-list">
         <h2>My Missions</h2>
+        <hr />
+        {missions.map((mission) => {
+          const {
+            id, name, reserved,
+          } = mission;
+          return (
+            reserved ? <p key={id}>{name}</p> : ''
+          );
+        })}
+        <hr />
       </div>
       <div id="rockets-list">
         <h2>My Rockets</h2>

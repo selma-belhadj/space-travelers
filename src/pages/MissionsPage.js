@@ -5,10 +5,10 @@ import './MissionsPage.css';
 
 const Missions = () => {
   const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(fetchAllMissions());
-  }, []);
   const missions = useSelector((state) => state.missions);
+  useEffect(() => {
+    if (!missions.length) dispatch(fetchAllMissions());
+  }, []);
   const missionTable = missions.map((mission) => (
     <tr key={mission.id}>
       <td>{mission.name}</td>
@@ -21,7 +21,7 @@ const Missions = () => {
     </tr>
   ));
   return (
-    <div>
+    <div id="missions-page" className="spacing">
       <table>
         <thead>
           <tr>

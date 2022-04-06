@@ -40,7 +40,7 @@ const missionsReducer = (state = [], actions) => {
         if (mission.id === actions.id) {
           return {
             ...mission,
-            reserved: !mission.reserved ? mission.reserved : false,
+            reserved: mission.reserved ? !mission.reserved : false,
           };
         }
         return mission;
