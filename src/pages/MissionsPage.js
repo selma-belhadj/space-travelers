@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchAllMissions } from '../redux/missions/missions';
+import { fetchAllMissions, joinMissionStatus } from '../redux/missions/missions';
 import './MissionsPage.css';
 
 const Missions = () => {
@@ -13,8 +13,11 @@ const Missions = () => {
     <tr key={mission.id}>
       <td>{mission.name}</td>
       <td>{mission.description}</td>
-      <td className="text-center"><span className="status-field unavailable-status">NOT A MEMBER</span></td>
-      <td className="text-center"><button className="button-mission join-mission" type="button">JOIN MISSION</button></td>
+      <td className="text-center">
+        <span className={(!mission.reserved) ? 'status-field unavailable-status ' : 'status-field available-status'}>{(!mission.reserved) ? 'NOT A MEMBER' : 'ACTIVE MEMBER'}</span>
+      </td>
+      <td className="text-center"><button onClick={() => { dispatch(joinMissionStatus(mission.id)); }} className={(!mission.reserved) ? 'button-mission join-mission' : 'button-mission leave-mission'} type="button">{(!mission.reserved) ? 'JOIN MISSION' : 'LEAVE MISSION'}</button></td>
+
     </tr>
   ));
   return (

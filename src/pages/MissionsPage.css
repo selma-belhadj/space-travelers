@@ -54,3 +54,8 @@ tr:nth-child(even) {
 .text-center {
   text-align: center;
 }
+
+.leave-mission {
+  border: 1px solid #f80021;
+  color: #f80021;
+}
