@@ -35,5 +35,9 @@ const rocketsReducer = (state = [], actions) => {
 };
 
 export {
-  rocketsReducer as default, fetchAllRockets, toggleReservedStatus,
+  rocketsReducer as default,
+  fetchAllRockets,
+  toggleReservedStatus,
+  ROCKETS_FETCHED,
+  TOGGLE_RESERVED,
 };
