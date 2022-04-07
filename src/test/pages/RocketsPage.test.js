@@ -46,7 +46,7 @@ describe('Testing Rockets Page', () => {
     const button = document.querySelector('button');
     expect(button.innerHTML).toBe('Reserve Rocket');
 
-    await act(() => {
+    await act(async () => {
       button.dispatchEvent(new MouseEvent('click', { bubbles: true }));
     });
     expect(button.innerHTML).toBe('Cancel Reservation');
