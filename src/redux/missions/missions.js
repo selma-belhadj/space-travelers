@@ -51,5 +51,11 @@ const missionsReducer = (state = [], actions) => {
 };
 
 export {
-  missionsReducer as default, fetchAllMissions, joinMissionStatus, leaveMissionStatus,
+  missionsReducer as default,
+  fetchAllMissions,
+  joinMissionStatus,
+  leaveMissionStatus,
+  FETCH_MISSIONS,
+  JOIN_MISSION,
+  LEAVE_MISSION,
 };
