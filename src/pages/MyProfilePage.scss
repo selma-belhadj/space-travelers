@@ -4,15 +4,8 @@
   row-gap: 2rem;
   padding-block: 30px;
 
-  // #missions-list {
-  //   flex-basis: 50%;
-  // }
-
-  // #rockets-list {
-  //   flex-basis: 50%;
-  // }
-
   hr {
+    border: 1px solid darkgrey;
     margin-block: 30px;
   }
 
@@ -23,7 +16,6 @@
 
 @media (max-width: 500px) {
   #profile-page {
-    // flex-direction: column;
     grid-template-columns: 100%;
     row-gap: 2rem;
   }
