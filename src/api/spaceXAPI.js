@@ -1,6 +1,5 @@
 class SpaceXAPI {
   static baseURL = 'https://api.spacexdata.com/v3/';
-  // TODO Implement API functionality in this class as static methods
 
   static fetchAllRockets = async () => fetch(`${this.baseURL}rockets`, {
     method: 'GET',

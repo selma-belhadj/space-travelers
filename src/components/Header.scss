@@ -1,5 +1,3 @@
-$medium: 900px;
-
 header {
   background-color: white;
   flex-direction: column;
@@ -55,7 +53,7 @@ header {
   }
 }
 
-@media (min-width: $medium) {
+@media (min-width: 900px) {
   header {
     height: 90px;
     flex-direction: row;
