@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import { Provider } from 'react-redux';
-import { act } from "react-dom/test-utils";
+import { act } from 'react-dom/test-utils';
 import Dragons from '../../pages/Dragons';
 import store from '../../redux/configureStore';
 import * as abc from '../../redux/dragons/dragons';
@@ -26,7 +26,7 @@ const fakeDragons = [
 ];
 
 const mockListDragons = () => {
-  jest.spyOn(abc, "listDragons").mockImplementation(() => (dispatch) => {
+  jest.spyOn(abc, 'listDragons').mockImplementation(() => (dispatch) => {
     dispatch({
       type: abc.LIST_DRAGONS,
       payload: fakeDragons,
@@ -73,7 +73,7 @@ describe('Testing Dragons Page', () => {
     );
     const btn1 = screen.getAllByRole('button')[0];
     const btn2 = screen.getAllByRole('button')[1];
-    //before clicking
+    // before clicking
     expect(btn1.textContent).toBe('Reserve Dragon');
     expect(btn2.textContent).toBe('Cancel Reservation');
 
