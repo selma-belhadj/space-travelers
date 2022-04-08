@@ -1,0 +1,22 @@
+#profile-page {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 2rem;
+  padding-block: 30px;
+
+  hr {
+    border: 1px solid darkgrey;
+    margin-block: 30px;
+  }
+
+  p {
+    margin-left: 15px;
+  }
+}
+
+@media (max-width: 500px) {
+  #profile-page {
+    grid-template-columns: 100%;
+    row-gap: 2rem;
+  }
+}

@@ -1,0 +1,77 @@
+* {
+  padding: 0;
+  margin: 0;
+  transition: 300ms;
+}
+
+#missions-page {
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  border: 1px solid #ddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #ddd;
+}
+
+.mission-name {
+  width: 20%;
+}
+
+.mission-description {
+  width: 50%;
+}
+
+.mission-status,
+.mission-action {
+  width: 15%;
+  text-align: center;
+}
+
+.status-field {
+  font-size: 0.8em;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+
+.unavailable-status {
+  background: gray;
+}
+
+.available-status {
+  background: #01aacc;
+}
+
+.button-mission {
+  padding: 5px 10px;
+  background: transparent;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.join-mission {
+  border: 1px solid gray;
+  color: gray;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.leave-mission {
+  border: 1px solid #f80021;
+  color: #f80021;
+  font-size: 95%;
+}
