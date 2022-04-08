@@ -8,6 +8,7 @@ const Rocket = ({
   description,
   image,
   isReserved,
+  type,
   onReserveButtonClick,
 }) => (
   <li className="rocket">
@@ -18,8 +19,11 @@ const Rocket = ({
       <h2>{name}</h2>
       <p>
         <span className={isReserved ? 'reserved-badge' : 'not-reserved'}>Reserved</span>
-        {description}
+        Type:
+        {' '}
+        {type}
       </p>
+      <p>{description}</p>
       <Button
         variant={isReserved ? 'light' : 'primary'}
         onClick={onReserveButtonClick}
@@ -36,6 +40,7 @@ Rocket.propTypes = {
   image: PropTypes.string.isRequired,
   isReserved: PropTypes.bool,
   onReserveButtonClick: PropTypes.func.isRequired,
+  type: PropTypes.string.isRequired,
 };
 
 Rocket.defaultProps = {
