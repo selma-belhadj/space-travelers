@@ -1,50 +1,26 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import './MyProfilePage.scss';
+import ReservedList from '../components/ReservedList';
 
 function MyProfilePage() {
   const rockets = useSelector((state) => state.rockets);
   const missions = useSelector((state) => state.missions);
   const dragonsList = useSelector((state) => state.dragons);
   const filteredDragons = dragonsList.filter((dragon) => dragon.dragonReserved);
+  const filteredMissions = missions.filter((mission) => mission.reserved);
+  const filteredRockets = rockets.filter((rocket) => rocket.reserved);
 
   return (
     <div id="profile-page" className="spacing">
       <div id="missions-list">
-        <h2>My Missions</h2>
-        <hr />
-        {missions.map((mission) => {
-          const {
-            id, name, reserved,
-          } = mission;
-          return (
-            reserved ? <p key={id}>{name}</p> : ''
-          );
-        })}
-        <hr />
+        <ReservedList list={filteredMissions} title="My Missions" />
       </div>
       <div id="rockets-list">
-        <h2>My Rockets</h2>
-        <hr />
-        {rockets.map((rocket) => {
-          const {
-            id, name, reserved,
-          } = rocket;
-          return (
-            reserved ? <p key={id}>{name}</p> : ''
-          );
-        })}
-        <hr />
+        <ReservedList list={filteredRockets} title="My Rockets" />
       </div>
       <div id="dragons-list">
-        <h2>My Dragons</h2>
-        <hr />
-        {
-          filteredDragons.map((dragon) => (
-            <p key={dragon.dragonId}>{dragon.dragonName}</p>
-          ))
-        }
-        <hr />
+        <ReservedList list={filteredDragons} title="My Dragons" />
       </div>
     </div>
   );
